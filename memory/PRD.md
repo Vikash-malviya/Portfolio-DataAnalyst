@@ -37,8 +37,9 @@
 - GitHub and Naukri URLs in `src/data/profile.js` are PLACEHOLDERS — replace with real profile URLs (Instagram confirmed: @_vikash__malviya___)
 - Canonical URL, og:image, sitemap.xml — pending confirmed production domain (add at deploy/SEO activation)
 
-## Backlog (prioritized)
-- P0: User confirms real GitHub/Instagram/Naukri links
+- 2026-10-23: Vercel-ready — added /app/frontend/vercel.json (framework create-react-app, yarn build, output build, SPA rewrite to /index.html); confirmed src has zero backend calls; production build passes with CI=true (same as Vercel); static build served and verified (Earth globe, Saturn, all assets 200). Deploy: push repo to GitHub → import in Vercel → set Root Directory to `frontend` → Deploy
+
+## Backlog (prioritized)- P0: User confirms real GitHub/Instagram/Naukri links
 - P1: Real project screenshots/dashboard embeds (Power BI publish-to-web iframes)
 - P1: Visitor query form (currently mailto/WhatsApp only — no backend by request)
 - P2: Blog/case-study pages per project, per-route SEO
