@@ -30,7 +30,7 @@
 - 2026-10-23: Mobile hero layering fix (avatar pushed below text on small screens)
 
 ## Pending / needs the user
-- GitHub, Instagram, Naukri URLs in `src/data/profile.js` are PLACEHOLDERS — replace with real profile URLs
+- GitHub and Naukri URLs in `src/data/profile.js` are PLACEHOLDERS — replace with real profile URLs (Instagram confirmed: @_vikash__malviya___)
 - Canonical URL, og:image, sitemap.xml — pending confirmed production domain (add at deploy/SEO activation)
 
 ## Backlog (prioritized)

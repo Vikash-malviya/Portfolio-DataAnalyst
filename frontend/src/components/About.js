@@ -1,10 +1,8 @@
 import { motion } from "framer-motion";
 import { GraduationCap, MapPin, Sparkles, Award } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
+import DoodleAvatar from "./DoodleAvatar";
 import { profile, stats } from "../data/profile";
-
-const PORTRAIT =
-  "https://images.pexels.com/photos/20502925/pexels-photo-20502925.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940";
 
 const Counter = ({ value, suffix }) => (
   <motion.span
@@ -30,15 +28,9 @@ export default function About() {
 
       <div className="mt-16 grid grid-cols-1 gap-6 md:grid-cols-12">
         <Reveal className="md:col-span-5" delay={0.05}>
-          <div className="group relative h-full overflow-hidden rounded-3xl border border-white/10">
-            <img
-              src={PORTRAIT}
-              alt="Moody portrait representing Vikash Malviya, data analyst from Rajasthan"
-              loading="lazy"
-              className="h-full min-h-[420px] w-full object-cover transition-transform duration-700 group-hover:scale-105"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent" />
-            <div className="absolute bottom-6 left-6 right-6 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/60 px-5 py-4 backdrop-blur-xl">
+          <div className="relative h-full">
+            <DoodleAvatar />
+            <div className="absolute bottom-6 left-6 right-6 z-20 flex items-center gap-3 rounded-2xl border border-white/10 bg-black/60 px-5 py-4 backdrop-blur-xl">
               <MapPin size={16} className="shrink-0 text-gold" />
               <p className="font-mono text-[11px] uppercase tracking-[0.2em] text-zinc-300">{profile.location}</p>
             </div>

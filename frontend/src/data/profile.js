@@ -19,7 +19,7 @@ export const profile = {
   socials: {
     linkedin: "https://www.linkedin.com/in/vikash-malviya-030337307",
     github: "https://github.com/vikash-malviya", // placeholder — update me
-    instagram: "https://www.instagram.com/vikash.malviya", // placeholder — update me
+    instagram: "https://www.instagram.com/_vikash__malviya___",
     naukri: "https://www.naukri.com/mnjuser/profile", // placeholder — update me
   },
 };
