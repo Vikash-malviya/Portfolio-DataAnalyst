@@ -6,7 +6,7 @@ import {
 import { Reveal, SectionHeading } from "./Reveal";
 import { skillGroups } from "../data/profile";
 
-const SI = (slug) => `https://cdn.simpleicons.org/${slug}/D4AF37`;
+const SI = (slug) => `https://cdn.simpleicons.org/${slug}/EE2737`;
 
 const tagIcons = {
   "Data Cleaning": Eraser,

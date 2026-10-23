@@ -11,7 +11,7 @@ export default function MiniAvatarScene() {
       <Canvas camera={{ position: [0, -0.1, 4.4], fov: 40 }} dpr={[1, 1.75]} gl={{ antialias: true, alpha: true }}>
         {SCENE_LIGHTS}
         <group position={[0, -0.15, 0]}>
-          <HeroFigure withOrbits={false} />
+          <HeroFigure withOrbits={false} swing={false} />
         </group>
         <Particles count={260} />
         <ContactShadows position={[0, -2.5, 0]} opacity={0.4} scale={8} blur={2.6} far={4} color="#000000" />

@@ -3,7 +3,7 @@ import { TrendingUp, ShoppingBag, Users, Percent } from "lucide-react";
 import { Reveal, SectionHeading } from "./Reveal";
 import { dashboardSeries, categoryShare } from "../data/profile";
 
-const GOLD = "#D4AF37";
+const GOLD = "#EE2737";
 const kpis = [
   { icon: TrendingUp, label: "Revenue tracked", value: "₹7.9L", delta: "+18.2% YoY" },
   { icon: ShoppingBag, label: "Orders analysed", value: "5,637", delta: "+12.4% YoY" },
