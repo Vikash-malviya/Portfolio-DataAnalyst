@@ -1,0 +1,27 @@
+# Vikash Malviya — Data Analyst Portfolio
+
+> Personal portfolio of Vikash Malviya, a Data Analyst based in Sojat, Rajasthan, India, specialising in SQL, Power BI, Advanced Excel and Python for business intelligence and reporting.
+
+## About
+
+Vikash is a BCA graduate (Manipal University Jaipur, Data Analytics) who builds interactive Power BI dashboards, SQL-based analyses and Excel reports to identify trends, track KPIs and support data-driven business decisions. He has worked as an MIS Executive handling sales-order tracking, inventory reporting and Excel dashboards.
+
+## Sections
+
+- Hero: introduction with interactive 3D avatar and quick actions (resume download, WhatsApp)
+- About: background, education and key stats
+- Skills: SQL, Power BI, Advanced Excel, Python, EDA, KPI reporting and tools
+- Projects: Retail Sales Performance Dashboard, Customer Churn Prediction Model, Stock Market Analysis and Visualization
+- Dashboard: illustrative analytics in the style of his retail sales project
+- Journey: work experience, education and certifications (Tata, HP LIFE, IBM)
+- Contact: WhatsApp click-to-chat, email, phone, LinkedIn, GitHub, Instagram and Naukri links
+
+## Contact
+
+- Email: vikash.malviya2495@gmail.com
+- Phone / WhatsApp: +91 99296 91872
+- LinkedIn: https://www.linkedin.com/in/vikash-malviya-030337307
+
+## Downloads
+
+- Resume: /resume.pdf
