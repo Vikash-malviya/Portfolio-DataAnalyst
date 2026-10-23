@@ -1,134 +1,92 @@
 {
-  "theme": "Luxury Dark",
-  "mood": "Elite, professional, precise, cinematic. Blends high-end luxury aesthetics with data-driven technical precision.",
+  "theme": "luxury-dark",
   "typography": {
     "headings": {
-      "font_family": "Cormorant Garamond, serif",
-      "style": "font-serif tracking-tight",
-      "sizes": "H1: text-5xl sm:text-6xl+ | H2: text-3xl sm:text-4xl | H3: text-xl sm:text-2xl",
-      "rules": "Never use Inter for headings. Use Cormorant Garamond for a luxury editorial feel. Must use tight letter spacing."
+      "family": "Playfair Display, serif",
+      "strategy": "Serif font to exude luxury, authority, and elegance. Font weight contrast (Black vs Light)."
     },
     "body": {
-      "font_family": "IBM Plex Sans, sans-serif",
-      "style": "font-sans leading-relaxed tracking-normal",
-      "sizes": "text-base sm:text-lg"
-    },
-    "labels": {
-      "font_family": "JetBrains Mono, monospace",
-      "style": "uppercase tracking-[0.2em] text-xs sm:text-sm"
+      "family": "IBM Plex Sans, sans-serif",
+      "strategy": "Clean, sterile mono-like body for technical data analyst context, ensuring high readability for dense analytics."
     }
   },
   "colors": {
-    "archetype": "LUXURY",
-    "backgrounds": {
-      "primary": "#050505",
-      "secondary": "#0A0A0C",
-      "surface": "#121214",
-      "glass": "bg-black/60 backdrop-blur-2xl border border-white/10"
-    },
-    "text": {
-      "primary": "#F5F5F7",
-      "secondary": "#A1A1AA",
-      "muted": "#71717A"
-    },
-    "accents": {
-      "primary": "#D4AF37",
-      "primary_hover": "#F3E5AB",
-      "glow": "rgba(212, 175, 55, 0.15)"
-    },
-    "rules": "No pure black #000000. No full-screen gradients. Use deep obsidian with gold accents. Buttons use accent color sparingly."
+    "background": "#050505",
+    "primary": "#D4AF37",
+    "secondary": "#1A1A1A",
+    "accent": "#F3E5AB",
+    "text_primary": "#F5F5F5",
+    "text_secondary": "#A3A3A3",
+    "surface": "#0F0F0F",
+    "border": "rgba(212, 175, 55, 0.2)"
   },
   "visual_enhancers": {
-    "textures": "Use background noise/grain overlay (opacity 3-5%) to remove digital flatness.",
-    "surfaces": "Use Glassmorphism (Crystal/Apple variant: bg-black/60, backdrop-blur-xl, 1px border-white/10, shadow-lg) for sticky headers, floating navs, and premium project cards.",
-    "borders": "1px solid borders using white/10 or gold/20.",
-    "shadows": "Ambient diffuse shadows for glass elements."
+    "shadows": "Ambient golden glows for interactive elements (e.g., box-shadow: 0 4px 20px rgba(212, 175, 55, 0.15))",
+    "borders": "1px solid rgba(212, 175, 55, 0.2) for cards and sections to provide a premium feel",
+    "gradients": "Subtle dark gradients (e.g., from #050505 to #0A0A0A) for backgrounds, no loud neon gradients",
+    "textures": "Subtle noise overlay (opacity 0.03) to break digital flatness and add high-end tactile feel"
   },
   "layouts": {
-    "hero": "Full screen (min-h-screen). 3D Avatar as centerpiece. Asymmetric text placement. Floating action bar at bottom for Contact/Resume.",
-    "grid": "Bento Grid Protocol. Use grid-cols-1 md:grid-cols-12. Generous gaps (gap-8).",
-    "spacing": "Generous spacing. py-24 or py-32 for sections. Container padding p-6 or p-8.",
-    "header": "Sticky nav, z-50, Glassmorphism background. NEVER fully transparent.",
-    "footer": "Massive footer, py-32. Big typography CTA."
+    "spacing": "Generous padding (p-8 to p-16) for breathing room. High density grids (grid-cols-1 md:grid-cols-2 lg:grid-cols-3) for project showcases.",
+    "cards": "Flat background (#0F0F0F) with 1px gold-tinted subtle border, no heavy box shadows by default, subtle lift on hover.",
+    "alignment": "Left-aligned for paragraphs and dense data descriptions. Center-aligned for hero and major section titles."
   },
   "motion": {
-    "libraries": [
-      "framer-motion",
-      "@studio-freight/react-lenis"
-    ],
-    "interactions": "Hover states must explicitly set text color and background. Micro-interactions on buttons (scale 0.98 on tap, translate-y on hover). Staggered entrance for lists/grids."
-  },
-  "3d_libraries": {
-    "recommendation": "@splinetool/react-spline",
-    "usage": "Use Spline for the 3D Avatar centerpiece in the Hero section. It provides an interactive, 'designer-first' 3D experience. For data visualization in projects, use Recharts."
-  },
-  "component_guidelines": {
-    "file_type": "MUST USE .js FILES! DO NOT USE .tsx!",
-    "buttons": "Pill-shaped or slightly rounded. Hover states must have higher contrast.",
-    "forms": "Use Shadcn customized form components.",
-    "cards": "Glassmorphism cards with inner 1px border.",
-    "icons": "Use @phosphor-icons/react or lucide-react."
+    "hover_states": "Subtle -translate-y-1, border color darkens/lightens, and ambient shadow increases.",
+    "transitions": "Specific transitions for transform and opacity (e.g., transition: transform 0.3s ease, border-color 0.3s ease).",
+    "entrance": "Staggered fade-up animations for project grids using framer-motion."
   },
   "accessibility": {
-    "contrast": "Ensure minimum 4.5:1 ratio for normal text. Use APCA guidelines.",
-    "testing": "All interactive and key informational elements MUST include a data-testid attribute.",
-    "motion": "Respect prefers-reduced-motion."
+    "contrast": "Ensure text contrast against #050505 background meets WCAG AA standards.",
+    "focus": "Focus states must have 2px gold ring offset by 2px dark background.",
+    "aria": "Use aria-hidden='true' for decorative visual enhancements. Ensure all interactive elements have data-testid attributes."
   },
   "media": {
     "image_urls": {
-      "portrait": {
-        "url": "https://images.pexels.com/photos/20502925/pexels-photo-20502925.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "description": "Moody, contemplative portrait in a black shirt, perfect for the About section."
-      },
-      "texture_bg": {
-        "url": "https://images.unsplash.com/photo-1650804068570-7fb2e3dbf888?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjAzNTl8MHwxfHNlYXJjaHwxfHxibGFjayUyMG9ic2lkaWFuJTIwdGV4dHVyZXxlbnwwfHx8fDE3OTI3NDY1NDV8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Black obsidian texture, useful as a subtle background layer."
-      },
       "project_retail": {
-        "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxyZXRhaWwlMjBzYWxlcyUyMGRhc2hib2FyZCUyMGRhcmt8ZW58MHx8fHwxNzkyNzQ2NTUx&ixlib=rb-4.1.0&q=85",
-        "description": "Retail Sales Performance dashboard thumbnail."
+        "url": "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMHVpfGVufDB8fHx8MTc5Mjc0Nzk3MHww&ixlib=rb-4.1.0&q=85",
+        "description": "Retail/sales performance dashboard screenshot with KPI cards and charts in a dark UI, representing Power BI.",
+        "category": "project_thumbnails"
       },
       "project_churn": {
-        "url": "https://images.pexels.com/photos/27141307/pexels-photo-27141307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-        "description": "Customer Churn analytics futuristic UI thumbnail."
+        "url": "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxkYXJrJTIwbW9kZSUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMHVpfGVufDB8fHx8MTc5Mjc0Nzk3MHww&ixlib=rb-4.1.0&q=85",
+        "description": "Customer churn analytics dashboard showing dark UI grid of metrics and data cards.",
+        "category": "project_thumbnails"
       },
       "project_stock": {
-        "url": "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwzfHxzdG9jayUyMG1hcmtldCUyMGNoYXJ0JTIwZGFya3xlbnwwfHx8fDE3OTI3NDY1NDV8MA&ixlib=rb-4.1.0&q=85",
-        "description": "Stock Market Analysis chart thumbnail."
+        "url": "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxmaW5hbmNpYWwlMjBzdG9jayUyMG1hcmtldCUyMGFuYWx5dGljcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3OTI3NDc5NzB8MA&ixlib=rb-4.1.0&q=85",
+        "description": "Stock market analysis dashboard with multiple chart panels and candlestick charts, designed to look like a Power BI interface.",
+        "category": "project_thumbnails"
       }
     }
   },
-  "pages_and_sections": [
-    {
-      "name": "Hero",
-      "content": "Interactive 3D Avatar, 'Vikash Malviya - Data Analyst', floating glass CTA bar for quick actions (Download Resume, WhatsApp Click-to-Chat)."
-    },
-    {
-      "name": "About & Skills",
-      "content": "Sojat, Rajasthan roots. Bento grid layout. Include portrait image. Skills (SQL, Power BI, Advanced Excel, Python) represented via sleek progress bars or glassmorphic tags."
-    },
-    {
-      "name": "Projects",
-      "content": "Showcase Retail Sales, Customer Churn, and Stock Market Analysis using the provided dark UI thumbnails."
-    },
-    {
-      "name": "Experience / Dashboard",
-      "content": "Timeline of data analysis journey presented as a sleek 'dashboard' layout."
-    },
-    {
-      "name": "Contact",
-      "content": "Massive footer typography 'Let's Connect'. Links to WhatsApp, Email, Phone, LinkedIn, GitHub, Naukri, Instagram. Use mailto:, tel:, and wa.me/ links."
+  "3d_libraries": {
+    "hero_avatar": {
+      "library": "@react-three/fiber",
+      "description": "Custom three.js anime-inspired hero avatar with drag-to-rotate interaction. Note: Do NOT use Spline.",
+      "implementation": "Use @react-three/fiber and @react-three/drei (OrbitControls for drag-to-rotate) to render the 3D avatar."
     }
-  ],
+  },
   "instructions_to_main_agent": [
-    "You MUST write React components using .js files ONLY. Do not use .tsx files.",
-    "Apply 'Luxury Dark' aesthetic. Backgrounds should be very dark gray/obsidian (#050505, #0a0a0c) with subtle noise texture. NO full-page gradients.",
-    "Use glassmorphism (backdrop-blur, translucent bg, 1px bright border) for headers, cards, and overlays. DO NOT use completely transparent backgrounds for anything content-bearing (like the header).",
-    "Use framer-motion for smooth staggered list reveals and hover animations.",
-    "Use Lenis (@studio-freight/react-lenis) for smooth scrolling.",
-    "For the 3D Hero Avatar, use @splinetool/react-spline. Embed a public Spline URL or placeholder 3D scene if specific model isn't available, ensuring it responds to cursor movement.",
-    "All buttons, inputs, and interactive elements MUST have a data-testid attribute.",
-    "Contact links: Ensure WhatsApp link uses 'https://wa.me/...' format, Email uses 'mailto:...', and Phone uses 'tel:...'."
+    "Design a responsive portfolio for a Data Analyst showcasing SQL, Power BI, Excel, and Python skills.",
+    "Strictly follow the luxury dark theme (Obsidian #050505 and Gold #D4AF37).",
+    "Use the updated image URLs for the projects to show realistic, intermediate-level dashboard analytics in a dark interface.",
+    "Integrate the 3D hero avatar using @react-three/fiber (not Spline).",
+    "Use Playfair Display for headings and IBM Plex Sans for body text to contrast luxury with technical precision.",
+    "Do NOT use transparent backgrounds for dropdowns or headers overlaying content.",
+    "Add data-testid attributes to all interactive elements."
   ],
-  "UNIVERSAL_GUIDELINES_FOR_MAIN_AGENT": "Avoid generic 'AI slop' aesthetics. Do not center-align the app container. Create depth with layered elements and z-index hierarchy. Ensure interactive elements have distinct hover/focus states with higher contrast. Do NOT use universal transitions (transition: all). Use specific transitions (e.g., transition-colors, transition-transform). Never use AI assistant emojis. Missing categories must not use placeholder text."
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": [
+    "Avoid 'AI slop' aesthetic. Create distinctive and creative frontend interfaces.",
+    "Do not use dark colors as gradients.",
+    "Avoid generic centered layouts and uniform styling. Create depth with z-index hierarchy and layered design.",
+    "Use glass-morphism (12-24px blur) where appropriate for overlapping elements, but ensure text contrast.",
+    "Do not apply universal transition 'transition: all'. Explicitly state transitions like 'transition: transform 0.2s ease, opacity 0.2s ease'.",
+    "Do not center align the app container (.App { text-align: center; }). Keep natural reading flow (left-aligned).",
+    "Use modern button styles (e.g., crisp rectangular with subtle gold border or pill-shaped).",
+    "Never use emoji characters like 🤖🧠💭💡 for icons. Use Phosphor Icons or Lucide React.",
+    "Ensure generous spacing (2-3x normal).",
+    "Use provided image_urls. Do not use placeholder text for missing images.",
+    "Use sonner for toasts, and shadcn components for UI logic, customizing them to fit the luxury-dark brand."
+  ]
 }

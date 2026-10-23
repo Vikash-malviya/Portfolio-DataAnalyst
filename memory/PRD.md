@@ -28,6 +28,8 @@
 - 2026-10-23: Initial build — intro overlay with masked reveal, 3D avatar hero (mouse-follow, orbiting data rings, particles), editorial marquee, About bento with portrait + stats, Skills with animated bars, Projects bento with image blocks, illustrative analytics Dashboard (KPIs + area/bar charts), Journey timeline, Contact footer with WhatsApp/email/call + LinkedIn/GitHub/Instagram/Naukri
 - 2026-10-23: SEO set — title/description, OG/Twitter, Person JSON-LD, favicon.svg (VM gold mark), robots.txt with AI-crawler group, llms.txt, noscript fallback. Canonical/og:image/sitemap omitted until a production domain is confirmed.
 - 2026-10-23: Mobile hero layering fix (avatar pushed below text on small screens)
+- 2026-10-23: Replaced stock portrait with animated doodle avatar (blink/float/wave-on-hover); Instagram set to @_vikash__malviya___; marquee contrast fix for tablet
+- 2026-10-23: Query form (frontend-only: composes WhatsApp wa.me / mailto messages); hero avatar rebuilt as original anime-hero-inspired 3D figure (spiky hair, headband, cape, back-sword) with drag-to-rotate OrbitControls + cursor head-tracking; project images replaced with dashboard-style screenshots (stock project now Power BI-style dashboard)
 
 ## Pending / needs the user
 - GitHub and Naukri URLs in `src/data/profile.js` are PLACEHOLDERS — replace with real profile URLs (Instagram confirmed: @_vikash__malviya___)

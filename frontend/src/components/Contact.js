@@ -1,6 +1,7 @@
 import { MessageCircle, Mail, Phone, Linkedin, Github, Instagram, Briefcase, ArrowUpRight } from "lucide-react";
 import { Reveal } from "./Reveal";
 import { LogoMark } from "./Navbar";
+import QueryForm from "./QueryForm";
 import { profile } from "../data/profile";
 
 const channels = [
@@ -31,6 +32,8 @@ export default function Contact() {
             Hiring for a Data Analyst, Business Analyst or MIS Reporting role? My inbox — and my WhatsApp — is one tap away.
           </p>
         </Reveal>
+
+        <QueryForm />
 
         <div className="mx-auto mt-14 grid max-w-4xl grid-cols-1 gap-4 sm:grid-cols-3">
           {channels.map((c, i) => (

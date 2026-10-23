@@ -69,8 +69,8 @@ export const projects = [
       "Analysed 10,000+ retail sales records to track revenue, regional performance and category trends. Built SQL pipelines (joins, aggregations, CTEs) to clean raw transactions, then modelled DAX measures for YoY growth, AOV and top SKUs — exposing a region underperforming by 15% and seasonal demand patterns, packaged into an executive summary.",
     tags: ["SQL", "Power BI", "DAX", "CTEs"],
     image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTB8MHwxfHNlYXJjaHwxfHxyZXRhaWwlMjBzYWxlcyUyMGRhc2hib2FyZCUyMGRhcmt8ZW58MHx8fHwxNzkyNzQ2NTUx&ixlib=rb-4.1.0&q=85",
-    alt: "Dark analytics dashboard with revenue charts for the retail sales project",
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMHVpfGVufDB8fHx8MTc5Mjc0Nzk3MHww&ixlib=rb-4.1.0&q=85",
+    alt: "Retail sales performance dashboard with KPI cards and charts in a dark Power BI style interface",
     span: "md:col-span-7",
   },
   {
@@ -81,8 +81,8 @@ export const projects = [
       "Built a churn classification model on 7,000+ telecom customer records. Cleaned data, engineered features and ran EDA to isolate the main churn drivers, validated on accuracy, precision and recall, then visualised results for a non-technical audience to steer retention priorities.",
     tags: ["Python", "Pandas", "EDA", "Classification"],
     image:
-      "https://images.pexels.com/photos/27141307/pexels-photo-27141307.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940",
-    alt: "Futuristic analytics interface representing the customer churn model",
+      "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxkYXJrJTIwbW9kZSUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMHVpfGVufDB8fHx8MTc5Mjc0Nzk3MHww&ixlib=rb-4.1.0&q=85",
+    alt: "Customer churn analytics dashboard with dark metric cards and charts",
     span: "md:col-span-5",
   },
   {
@@ -93,8 +93,8 @@ export const projects = [
       "End-to-end analysis of stock market data — Python for cleaning and analysis, SQL for querying, and an interactive Power BI dashboard for insight. Documented in a formal project report and defended in a viva at Manipal University Jaipur.",
     tags: ["Python", "SQL", "Power BI", "Research"],
     image:
-      "https://images.unsplash.com/photo-1590283603385-17ffb3a7f29f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NjA1MDZ8MHwxfHNlYXJjaHwzfHxzdG9jayUyMG1hcmtldCUyMGNoYXJ0JTIwZGFya3xlbnwwfHx8fDE3OTI3NDY1NDV8MA&ixlib=rb-4.1.0&q=85",
-    alt: "Stock market candlestick chart on a dark trading screen",
+      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxmaW5hbmNpYWwlMjBzdG9jayUyMG1hcmtldCUyMGFuYWx5dGljcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3OTI3NDc5NzB8MA&ixlib=rb-4.1.0&q=85",
+    alt: "Stock market analysis dashboard with multiple chart panels like a Power BI interface",
     span: "md:col-span-12",
   },
 ];
