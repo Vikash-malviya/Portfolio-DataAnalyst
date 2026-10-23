@@ -32,6 +32,37 @@ function Particles({ count = 320 }) {
   );
 }
 
+function AsteroidBelt({ count = 46 }) {
+  const group = useRef();
+  const rocks = useMemo(
+    () =>
+      Array.from({ length: count }, (_, i) => {
+        const angle = Math.random() * Math.PI * 2;
+        const radius = 2.55 + Math.random() * 0.55;
+        return {
+          pos: [Math.cos(angle) * radius, (Math.random() - 0.5) * 0.22, Math.sin(angle) * radius * 0.9],
+          size: 0.02 + Math.random() * 0.045,
+          rot: [Math.random() * Math.PI, Math.random() * Math.PI, 0],
+          gold: i % 3 === 0,
+        };
+      }),
+    [count],
+  );
+  useFrame((_, delta) => {
+    if (group.current) group.current.rotation.y += delta * 0.12;
+  });
+  return (
+    <group ref={group} rotation={[0.35, 0, 0.18]}>
+      {rocks.map((r, i) => (
+        <mesh key={i} position={r.pos} rotation={r.rot}>
+          <dodecahedronGeometry args={[r.size]} />
+          <meshStandardMaterial color={r.gold ? GOLD : "#8f8f96"} metalness={0.7} roughness={0.4} emissive={r.gold ? GOLD : "#000000"} emissiveIntensity={r.gold ? 0.35 : 0} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
 function Saturn() {
   const planet = useRef();
   const moons = useRef();
@@ -91,6 +122,7 @@ export default function SaturnScene() {
         <pointLight position={[-6, 2, -4]} intensity={26} color="#9db4d6" />
         <pointLight position={[0, -3, 3]} intensity={10} color={GOLD} />
         <Saturn />
+        <AsteroidBelt />
         <Particles />
         <ContactShadows position={[0, -2.2, 0]} opacity={0.4} scale={8} blur={2.6} far={4} color="#000000" />
         <OrbitControls

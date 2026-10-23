@@ -60,7 +60,7 @@ export default function Hero() {
       </motion.div>
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#050505_92%)] lg:bg-none" />
 
-      <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-6 pt-32 pb-40 lg:px-10 lg:pb-32">
+      <div className="pointer-events-none relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-6 pt-32 pb-40 lg:px-10 lg:pb-32">
         <div className="max-w-2xl">
           <MaskedLine delay={1.7}>
             <span className="inline-flex items-center gap-2 rounded-full border border-gold/30 bg-gold/5 px-4 py-1.5 font-mono text-[11px] uppercase tracking-[0.25em] text-gold">
@@ -98,7 +98,7 @@ export default function Hero() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.8, delay: 2.55, ease: [0.22, 1, 0.36, 1] }}
-            className="mt-10 flex flex-wrap items-center gap-4"
+            className="pointer-events-auto mt-10 flex flex-wrap items-center gap-4"
           >
             <a
               data-testid="hero-resume-button"

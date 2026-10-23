@@ -30,7 +30,8 @@
 - 2026-10-23: Mobile hero layering fix (avatar pushed below text on small screens)
 - 2026-10-23: Replaced stock portrait with animated doodle avatar (blink/float/wave-on-hover); Instagram set to @_vikash__malviya___; marquee contrast fix for tablet
 - 2026-10-23: About profile-pic slot now renders the same 3D anime-hero model (auto-rotating, drag-to-spin, gold horn added); doodle avatar removed; hero location line restyled to plain readable text per user feedback
-- 2026-10-23: Hero globe upgraded to textured Earth (AI-generated golden-continents equirectangular texture /assets/earth-texture.png) with floating 3D bar chart, cyan pulsing marker on Rajasthan, warm gold + cool blue mixed lighting; skill logos fixed — Power BI/Excel are inline SVG marks (Microsoft brands absent from simple-icons CDN), python/jira/github served locally from /public/assets/logos/
+- 2026-10-23: Hero globe upgraded to textured Earth (AI-generated golden-continents equirectangular texture /assets/earth-texture.png) with cyan pulsing marker on Rajasthan, warm gold + cool blue mixed lighting; skill logos fixed — Power BI/Excel are inline SVG marks (Microsoft brands absent from simple-icons CDN), python/jira/github served locally from /public/assets/logos/
+- 2026-10-23: Removed floating mini-charts from globe; FIXED globe drag (hero text layer was swallowing pointer events — now pointer-events-none with interactive CTAs re-enabled); Saturn gained a 46-rock asteroid belt (gold + silver dodecahedrons orbiting beyond the rings)
 
 ## Pending / needs the user
 - GitHub and Naukri URLs in `src/data/profile.js` are PLACEHOLDERS — replace with real profile URLs (Instagram confirmed: @_vikash__malviya___)

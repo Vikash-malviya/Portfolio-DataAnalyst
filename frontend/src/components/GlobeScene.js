@@ -35,53 +35,6 @@ function Marker() {
   );
 }
 
-function MiniBars() {
-  const heights = [0.22, 0.45, 0.34, 0.62];
-  return (
-    <group position={[-1.2, 0.45, 1.25]} rotation={[0, 0.4, 0]} scale={0.6}>
-      {heights.map((h, i) => (
-        <mesh key={i} position={[i * 0.16 - 0.24, h / 2, 0]}>
-          <boxGeometry args={[0.11, h, 0.11]} />
-          <meshStandardMaterial color={GOLD} emissive={GOLD} emissiveIntensity={0.9} metalness={0.6} roughness={0.3} />
-        </mesh>
-      ))}
-      <mesh position={[0, -0.015, 0]}>
-        <boxGeometry args={[0.78, 0.02, 0.2]} />
-        <meshStandardMaterial color="#2a2a2e" metalness={0.8} roughness={0.3} />
-      </mesh>
-    </group>
-  );
-}
-
-function MiniTrend() {
-  const pts = [
-    [0, 0, 0],
-    [0.18, 0.12, 0],
-    [0.36, 0.08, 0],
-    [0.54, 0.28, 0],
-    [0.72, 0.42, 0],
-  ];
-  const curve = useMemo(() => new THREE.CatmullRomCurve3(pts.map((p) => new THREE.Vector3(...p))), []);
-  return (
-    <group position={[1.4, 0.85, 1.2]} rotation={[0, -0.5, 0]} scale={0.9}>
-      <mesh>
-        <tubeGeometry args={[curve, 32, 0.014, 8, false]} />
-        <meshStandardMaterial color={COOL} emissive={COOL} emissiveIntensity={1.2} />
-      </mesh>
-      {pts.map((p, i) => (
-        <mesh key={i} position={p}>
-          <sphereGeometry args={[0.035, 12, 12]} />
-          <meshStandardMaterial color={COOL} emissive={COOL} emissiveIntensity={1.8} />
-        </mesh>
-      ))}
-      <mesh position={[0.78, 0.48, 0]} rotation={[0, 0, -Math.PI / 4]}>
-        <coneGeometry args={[0.05, 0.12, 12]} />
-        <meshStandardMaterial color={COOL} emissive={COOL} emissiveIntensity={1.6} />
-      </mesh>
-    </group>
-  );
-}
-
 function Earth() {
   const texture = useLoader(THREE.TextureLoader, "/assets/earth-texture.png");
   texture.colorSpace = THREE.SRGBColorSpace;
@@ -137,12 +90,6 @@ export default function GlobeScene() {
         <pointLight position={[0, -2, 4]} intensity={8} color="#93c5fd" />
         <Suspense fallback={null}>
           <Earth />
-          <Float speed={2} rotationIntensity={0.3} floatIntensity={1}>
-            <MiniBars />
-          </Float>
-          <Float speed={2.4} rotationIntensity={0.3} floatIntensity={1}>
-            <MiniTrend />
-          </Float>
         </Suspense>
         <Starfield />
         <OrbitControls
