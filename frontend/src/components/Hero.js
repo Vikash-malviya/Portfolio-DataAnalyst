@@ -1,7 +1,11 @@
-import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
 import { FileDown, MessageCircle, Mail, MapPin } from "lucide-react";
 import AvatarScene from "./three/AvatarScene";
+import { WebDecor } from "./three/figure";
 import { profile } from "../data/profile";
+
+const CAROUSEL_SKILLS = ["SQL", "Power BI", "Advanced Excel", "Python", "DAX", "Data Storytelling"];
 
 const MaskedLine = ({ children, delay, className = "" }) => (
   <span className={`block overflow-hidden ${className}`}>
@@ -16,6 +20,33 @@ const MaskedLine = ({ children, delay, className = "" }) => (
   </span>
 );
 
+function SkillCarousel() {
+  const [index, setIndex] = useState(0);
+  useEffect(() => {
+    const t = setInterval(() => setIndex((i) => (i + 1) % CAROUSEL_SKILLS.length), 2200);
+    return () => clearInterval(t);
+  }, []);
+  return (
+    <span data-testid="hero-skill-carousel" className="inline-flex items-baseline gap-3 font-mono text-xs uppercase tracking-[0.25em] text-zinc-500">
+      Fluent in
+      <span className="relative inline-block h-5 w-44 overflow-hidden text-left">
+        <AnimatePresence mode="wait">
+          <motion.span
+            key={CAROUSEL_SKILLS[index]}
+            initial={{ y: 18, opacity: 0 }}
+            animate={{ y: 0, opacity: 1 }}
+            exit={{ y: -18, opacity: 0 }}
+            transition={{ duration: 0.45, ease: [0.22, 1, 0.36, 1] }}
+            className="absolute left-0 top-0 whitespace-nowrap font-serif text-base normal-case italic tracking-tight text-gold"
+          >
+            {CAROUSEL_SKILLS[index]}
+          </motion.span>
+        </AnimatePresence>
+      </span>
+    </span>
+  );
+}
+
 export default function Hero() {
   return (
     <section id="home" data-testid="hero-section" className="relative flex min-h-screen flex-col overflow-hidden">
@@ -24,6 +55,8 @@ export default function Hero() {
         <AvatarScene />
       </div>
       <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#050505_92%)]" />
+      <WebDecor className="pointer-events-none absolute -left-8 -top-8 z-[5] h-56 w-56 opacity-20" />
+      <WebDecor className="pointer-events-none absolute -bottom-8 -right-8 z-[5] h-56 w-56 rotate-180 opacity-20" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-6 pt-32 pb-40 lg:px-10 lg:pb-32">
         <div className="max-w-2xl">
@@ -45,9 +78,13 @@ export default function Hero() {
             <p className="max-w-xl text-base sm:text-lg leading-relaxed text-zinc-400">{profile.tagline}</p>
           </MaskedLine>
 
-          <MaskedLine delay={2.35} className="mt-6">
-            <p className="flex items-center gap-2 font-mono text-xs uppercase tracking-[0.25em] text-zinc-500">
-              <MapPin size={13} className="text-gold" /> {profile.location}
+          <MaskedLine delay={2.3} className="mt-6">
+            <SkillCarousel />
+          </MaskedLine>
+
+          <MaskedLine delay={2.35} className="mt-4">
+            <p className="flex items-center gap-2 text-sm text-zinc-400">
+              <MapPin size={14} className="text-gold" /> {profile.location}
             </p>
           </MaskedLine>
 

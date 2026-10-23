@@ -35,10 +35,10 @@ export const skillGroups = [
   {
     title: "Query & Model",
     skills: [
-      { name: "SQL — Joins, CTEs, Window Functions", level: 88 },
-      { name: "Power BI — Power Query, DAX, Modelling", level: 90 },
-      { name: "Advanced Excel — XLOOKUP, Pivots, Dashboards", level: 92 },
-      { name: "Python — Pandas, NumPy, Matplotlib", level: 80 },
+      { name: "SQL — Joins, CTEs, Window Functions", level: 88, icon: "db" },
+      { name: "Power BI — Power Query, DAX, Modelling", level: 90, slug: "powerbi" },
+      { name: "Advanced Excel — XLOOKUP, Pivots, Dashboards", level: 92, slug: "microsoftexcel" },
+      { name: "Python — Pandas, NumPy, Matplotlib", level: 80, slug: "python" },
     ],
   },
   {
@@ -68,9 +68,8 @@ export const projects = [
     description:
       "Analysed 10,000+ retail sales records to track revenue, regional performance and category trends. Built SQL pipelines (joins, aggregations, CTEs) to clean raw transactions, then modelled DAX measures for YoY growth, AOV and top SKUs — exposing a region underperforming by 15% and seasonal demand patterns, packaged into an executive summary.",
     tags: ["SQL", "Power BI", "DAX", "CTEs"],
-    image:
-      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwxfHxkYXJrJTIwbW9kZSUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMHVpfGVufDB8fHx8MTc5Mjc0Nzk3MHww&ixlib=rb-4.1.0&q=85",
-    alt: "Retail sales performance dashboard with KPI cards and charts in a dark Power BI style interface",
+    image: "/assets/project-retail.png",
+    alt: "Power BI style dark dashboard for the retail sales performance project with KPI cards and charts",
     span: "md:col-span-7",
   },
   {
@@ -80,9 +79,8 @@ export const projects = [
     description:
       "Built a churn classification model on 7,000+ telecom customer records. Cleaned data, engineered features and ran EDA to isolate the main churn drivers, validated on accuracy, precision and recall, then visualised results for a non-technical audience to steer retention priorities.",
     tags: ["Python", "Pandas", "EDA", "Classification"],
-    image:
-      "https://images.unsplash.com/photo-1526628953301-3e589a6a8b74?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NDQ2NDF8MHwxfHNlYXJjaHwyfHxkYXJrJTIwbW9kZSUyMGFuYWx5dGljcyUyMGRhc2hib2FyZCUyMHVpfGVufDB8fHx8MTc5Mjc0Nzk3MHww&ixlib=rb-4.1.0&q=85",
-    alt: "Customer churn analytics dashboard with dark metric cards and charts",
+    image: "/assets/project-churn.png",
+    alt: "Power BI style dark dashboard for the customer churn prediction project",
     span: "md:col-span-5",
   },
   {
@@ -92,9 +90,8 @@ export const projects = [
     description:
       "End-to-end analysis of stock market data — Python for cleaning and analysis, SQL for querying, and an interactive Power BI dashboard for insight. Documented in a formal project report and defended in a viva at Manipal University Jaipur.",
     tags: ["Python", "SQL", "Power BI", "Research"],
-    image:
-      "https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2NzR8MHwxfHNlYXJjaHwzfHxmaW5hbmNpYWwlMjBzdG9jayUyMG1hcmtldCUyMGFuYWx5dGljcyUyMGRhc2hib2FyZHxlbnwwfHx8fDE3OTI3NDc5NzB8MA&ixlib=rb-4.1.0&q=85",
-    alt: "Stock market analysis dashboard with multiple chart panels like a Power BI interface",
+    image: "/assets/project-stock.png",
+    alt: "Power BI style dark dashboard for the stock market analysis project with candlestick and KPI panels",
     span: "md:col-span-12",
   },
 ];
