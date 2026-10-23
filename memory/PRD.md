@@ -30,7 +30,7 @@
 - 2026-10-23: Mobile hero layering fix (avatar pushed below text on small screens)
 - 2026-10-23: Replaced stock portrait with animated doodle avatar (blink/float/wave-on-hover); Instagram set to @_vikash__malviya___; marquee contrast fix for tablet
 - 2026-10-23: About profile-pic slot now renders the same 3D anime-hero model (auto-rotating, drag-to-spin, gold horn added); doodle avatar removed; hero location line restyled to plain readable text per user feedback
-- 2026-10-23: Site-wide theme switched gold → luxury crimson red/black (#EE2737 via tailwind `gold` color alias); avatar rebuilt as RED-suit spider hero (white lenses, black webbing, silver webs); web-swing entrance animation on page load (drops in on a web line from above, hero only); logo/favicon/charts/skill logos recoloured to crimson
+- 2026-10-23: Theme reverted crimson → luxury gold (#D4AF37); spider avatars removed; hero now shows AI-generated golden data-network artwork (/public/assets/hero-art.png) in a clipped gold frame; About profile spot now has an interactive 3D golden Saturn (rings, moons, particles, drag-to-orbit)
 
 ## Pending / needs the user
 - GitHub and Naukri URLs in `src/data/profile.js` are PLACEHOLDERS — replace with real profile URLs (Instagram confirmed: @_vikash__malviya___)

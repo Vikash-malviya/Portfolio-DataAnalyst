@@ -14,9 +14,9 @@ const links = [
 
 export const LogoMark = ({ className = "h-9 w-9" }) => (
   <svg viewBox="0 0 48 48" className={className} aria-hidden="true">
-    <rect x="2" y="2" width="44" height="44" rx="12" fill="#0A0A0C" stroke="#EE2737" strokeWidth="1.5" />
-    <path d="M13 14 L24 35 L35 14" fill="none" stroke="#EE2737" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
-    <circle cx="24" cy="11" r="2" fill="#EE2737" />
+    <rect x="2" y="2" width="44" height="44" rx="12" fill="#0A0A0C" stroke="#D4AF37" strokeWidth="1.5" />
+    <path d="M13 14 L24 35 L35 14" fill="none" stroke="#D4AF37" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round" />
+    <circle cx="24" cy="11" r="2" fill="#D4AF37" />
   </svg>
 );
 
