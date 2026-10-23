@@ -36,8 +36,8 @@ export const skillGroups = [
     title: "Query & Model",
     skills: [
       { name: "SQL — Joins, CTEs, Window Functions", level: 88, icon: "db" },
-      { name: "Power BI — Power Query, DAX, Modelling", level: 90, slug: "powerbi" },
-      { name: "Advanced Excel — XLOOKUP, Pivots, Dashboards", level: 92, slug: "microsoftexcel" },
+      { name: "Power BI — Power Query, DAX, Modelling", level: 90, variant: "pbi" },
+      { name: "Advanced Excel — XLOOKUP, Pivots, Dashboards", level: 92, variant: "xls" },
       { name: "Python — Pandas, NumPy, Matplotlib", level: 80, slug: "python" },
     ],
   },

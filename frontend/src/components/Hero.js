@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { FileDown, MessageCircle, Mail, MapPin } from "lucide-react";
+import GlobeScene from "./GlobeScene";
 import { profile } from "../data/profile";
 
 const CAROUSEL_SKILLS = ["SQL", "Power BI", "Advanced Excel", "Python", "DAX", "Data Storytelling"];
@@ -48,25 +49,16 @@ function SkillCarousel() {
 export default function Hero() {
   return (
     <section id="home" data-testid="hero-section" className="relative flex min-h-screen flex-col overflow-hidden">
-      {/* artwork panel */}
-      <div className="absolute inset-x-0 bottom-0 top-1/3 opacity-70 lg:inset-y-0 lg:left-1/2 lg:opacity-100">
-        <motion.div
-          initial={{ opacity: 0, scale: 1.04 }}
-          animate={{ opacity: 1, scale: 1 }}
-          transition={{ duration: 1.4, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
-          className="absolute inset-5 lg:inset-y-14 lg:left-8 lg:right-14"
-        >
-          <div className="relative h-full w-full overflow-hidden rounded-3xl border border-gold/25 shadow-2xl shadow-gold/10">
-            <img
-              data-testid="hero-art-image"
-              src="/assets/hero-art.png"
-              alt="Golden data constellation artwork with glowing particles and chart silhouettes"
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#050505]/80 via-transparent to-[#050505]/30" />
-          </div>
-        </motion.div>
-      </div>
+      {/* interactive 3D globe */}
+      <motion.div
+        initial={{ opacity: 0, scale: 1.04 }}
+        animate={{ opacity: 1, scale: 1 }}
+        transition={{ duration: 1.4, delay: 1.8, ease: [0.22, 1, 0.36, 1] }}
+        className="absolute inset-x-0 bottom-0 top-1/3 opacity-80 lg:inset-y-0 lg:left-1/2 lg:opacity-100"
+      >
+        <GlobeScene />
+      </motion.div>
+      <div className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_35%,#050505_92%)] lg:bg-none" />
 
       <div className="relative z-10 mx-auto flex w-full max-w-7xl flex-1 items-center px-6 pt-32 pb-40 lg:px-10 lg:pb-32">
         <div className="max-w-2xl">
@@ -84,7 +76,11 @@ export default function Hero() {
             </MaskedLine>
           </h1>
 
-          <MaskedLine delay={2.2} className="mt-7">
+          <MaskedLine delay={2.1} className="mt-6">
+            <div className="h-px w-44 bg-gradient-to-r from-gold via-sky-400 to-transparent" />
+          </MaskedLine>
+
+          <MaskedLine delay={2.2} className="mt-5">
             <p className="max-w-xl text-base sm:text-lg leading-relaxed text-zinc-400">{profile.tagline}</p>
           </MaskedLine>
 

@@ -6,7 +6,23 @@ import {
 import { Reveal, SectionHeading } from "./Reveal";
 import { skillGroups } from "../data/profile";
 
-const SI = (slug) => `https://cdn.simpleicons.org/${slug}/D4AF37`;
+const GOLD = "#D4AF37";
+const SI = (slug) => `/assets/logos/${slug}.svg`;
+
+const PbiLogo = ({ size }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill={GOLD} aria-hidden="true">
+    <rect x="3" y="12" width="4.5" height="9" rx="1.6" />
+    <rect x="9.8" y="7" width="4.5" height="14" rx="1.6" />
+    <rect x="16.5" y="3" width="4.5" height="18" rx="1.6" />
+  </svg>
+);
+
+const XlsLogo = ({ size }) => (
+  <svg viewBox="0 0 24 24" width={size} height={size} fill="none" stroke={GOLD} strokeWidth="2" aria-hidden="true">
+    <rect x="2.5" y="2.5" width="19" height="19" rx="4.5" />
+    <path d="M8.5 8.5 L15.5 15.5 M15.5 8.5 L8.5 15.5" strokeLinecap="round" />
+  </svg>
+);
 
 const tagIcons = {
   "Data Cleaning": Eraser,
@@ -26,7 +42,9 @@ const tagIcons = {
 };
 const tagSlugs = { Jira: "jira", "Git & GitHub": "github" };
 
-export function SkillLogo({ slug, icon: Icon, size = 16, name }) {
+export function SkillLogo({ slug, variant, icon: Icon, size = 16, name }) {
+  if (variant === "pbi") return <PbiLogo size={size} />;
+  if (variant === "xls") return <XlsLogo size={size} />;
   if (slug) {
     return (
       <img
@@ -71,7 +89,7 @@ export default function Skills() {
                     <div className="mb-2.5 flex items-center justify-between gap-4">
                       <span className="flex items-center gap-3 text-sm text-zinc-200">
                         <span className="flex h-8 w-8 items-center justify-center rounded-xl border border-white/10 bg-white/[0.04]">
-                          <SkillLogo slug={s.slug} icon={s.icon === "db" ? Database : null} name={s.name} size={16} />
+                          <SkillLogo slug={s.slug} variant={s.variant} icon={s.icon === "db" ? Database : null} name={s.name} size={16} />
                         </span>
                         {s.name}
                       </span>
